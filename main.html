@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/base.css">
+    <script src="lib/require/require.min.js"></script>
+    <script src="js/require-config.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div>
+    <header class="header">
+        <figure class="pull-left logo"><a></a></figure>
+        <h1 class="pull-left fts18">Ripple自动交易机器人</h1>
+
+    </header>
+    <section class="section">
+        <div class="left-nav pull-left">
+            <div style="margin-left: 10px;font-size: 16px;">
+                <label>设置参数</label>
+                <div style="margin-top: 20px;">
+                    ripple address：
+                    <input class="input_set" id="xrp_address" value="rKT2rfccHmXNxk6bTRNc9f9fegGC38A1ej">
+                </div>
+                <div style="margin-top: 20px;">
+                    ripple secret：
+                    <input type="password" class="input_set" id="xrp_key" value="sn37KiDkPqkAJLDYqLJQ3uFMCDu8K">
+                </div>
+                <div style="margin-top: 20px;">
+                    交易网关地址：
+                    <input class="input_set" value="rKiCet8SdvWxPXnAgYarFUXMh1zCPz432Y">
+                </div>
+                <div style="margin-top: 20px;">
+                    <a class="btn-blue" id="start_btn">启动</a>
+                    <a class="btn-white" style="margin-left: 30px;" id="stop_btn">停止</a>
+                </div>
+            </div>
+        </div>
+        <div class="wd-container">
+            <div style="line-height: 50px;margin-left: 50px;">
+                <label >XRP:<span id="xrp_sp"></span></label>
+                <label style="margin-left: 50px;">CNY:<span id="cny_sp"></span></label>
+                <label style="margin-left: 50px;">asks:<span id="asks_sp"></span></label>
+            </div>
+            <textarea id="log_info" style="width: 100%;height: 400px;background: #000;color:#fff" disabled>...log message...</textarea>
+            <div style="margin-top: 10px;font-size: 16px;">
+                <label>说明：</label>
+                <p>设置完后直接点击启动按钮，必须使用chrome浏览器，使用了浏览器的Web SQL，算法采用区间交易法，默认区间在[0.04,0.07]</p>
+                <p>需要改交易区间等其他配置，可以下载源码，require-config.js中修改各种参数配置</p>
+                <span>开源gitHub：https://github.com/bolibei/RippleRbt.git</span>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>
